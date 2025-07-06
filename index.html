@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMS Platform</title>
   <link rel="stylesheet" href="style.css" />
+
+  <script>
+  
+</script>
 </head>
 <body>
   <div class="hero-section">
@@ -14,8 +18,10 @@
     <div class="hero-overlay">
       <!-- Navbar -->
       <nav class="navbar">
-        <img src="Logo.png" alt="Logo" class="Logo" />
-        <ul class="nav-links">
+        <div><img src="Logo.png" alt="Logo" class="Logo" /></div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+
+        <ul class="nav-links " id="nav-links">
           <li><a href="#">Features</a></li>
           <li><a href="#">Use Cases</a></li>
           <li><a href="#">Setup</a></li>
@@ -239,12 +245,21 @@
   </div>
 </div>
 <script>
-  const toggleBtn = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+  // const toggleBtn = document.querySelector(".menu-toggle");
+  // const navLinks = document.querySelector(".nav-links");
 
-  toggleBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+  // toggleBtn.addEventListener("click", () => {
+  //   navLinks.classList.toggle("active");
+  // });
+
+    const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  // alert("Hamburger menu clicked!");
+  navLinks.classList.toggle("active");
+});
+
 </script>
 
 </body>
