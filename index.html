@@ -5,28 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMS Platform</title>
   <link rel="stylesheet" href="style.css" />
-
-  <script>
-  
-</script>
 </head>
 <body>
   <div class="hero-section">
     <img src="section1 background.png" alt="Background" class="bg-image" />
-
-    <!-- Hero Overlay for darker navbar background -->
     <div class="hero-overlay">
+      
       <!-- Navbar -->
       <nav class="navbar">
-        <div><img src="Logo.png" alt="Logo" class="Logo" /></div>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-
-        <ul class="nav-links " id="nav-links">
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Use Cases</a></li>
-          <li><a href="#">Setup</a></li>
-          <li><a href="#">Pricing</a></li>
+        <div><img src="Logo.png" alt="Logo" class="logo" /></div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="mobileMenu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#use-cases">Use Cases</a></li>
+          <li><a href="#setup">Setup</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <!-- Buttons in mobile view -->
+          <div class="mobile-nav-buttons">
+            <button class="btn-outline">Contact</button>
+            <button class="btn-primary">Start now</button>
+          </div>
         </ul>
+
+        <!-- Desktop Buttons -->
         <div class="nav-buttons">
           <button class="btn-outline">Contact</button>
           <button class="btn-primary">Start now</button>
@@ -50,10 +53,14 @@
     </div>
   </div>
 
-  
+  <!-- The rest of your sections stay the same -->
+  <!-- ... (Section 2 to Footer) ... -->
 
+  <!-- Footer and Footer Bottom already correct -->
+  <!-- ... -->
 
-  
+ 
+
   <!-- Section 2: Not Just Another Tool -->
 <section class="section2">
   <div class="section2-wrapper">
@@ -261,6 +268,20 @@ hamburger.addEventListener("click", () => {
 });
 
 </script>
-
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+  }
+</script>
+ <!-- Script to toggle mobile menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
 </body>
 </html>
